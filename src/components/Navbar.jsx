@@ -36,14 +36,6 @@ const Navbar = () => {
             Features
           </a>
           <a 
-            href="#about" 
-            className="nav-link"
-            onClick={(e) => handleNavLinkClick(e, 'about')}
-            aria-label="Navigate to About section"
-          >
-            About
-          </a>
-          <a 
             href="#contact" 
             className="nav-link"
             onClick={(e) => handleNavLinkClick(e, 'contact')}
@@ -51,7 +43,6 @@ const Navbar = () => {
           >
             Contact
           </a>
-          <button className="btn btn-primary">Get Started</button>
         </div>
         <button 
           className="nav-toggle"

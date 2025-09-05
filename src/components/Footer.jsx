@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSmoothScroll } from '../hooks/useSmoothScroll'
+import PrivacyModal from './PrivacyModal'
+import TermsModal from './TermsModal'
 import './Footer.css'
 
 const Footer = () => {
   const { handleLinkClick } = useSmoothScroll(80)
+  const [showPrivacy, setShowPrivacy] = useState(false)
+  const [showTerms, setShowTerms] = useState(false)
 
   return (
     <footer className="footer" id="contact">
@@ -22,99 +26,39 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
+
+          {/* Contact & Legal */}
           <div className="footer-section">
-            <h4 className="footer-title">Quick Links</h4>
+            <h4 className="footer-title">Contact Us</h4>
             <ul className="footer-links">
               <li>
-                <a 
-                  href="#hero" 
-                  onClick={(e) => handleLinkClick(e, 'hero')}
-                >
-                  Home
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#features" 
-                  onClick={(e) => handleLinkClick(e, 'features')}
-                >
-                  Sign In
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#about" 
-                  onClick={(e) => handleLinkClick(e, 'about')}
-                >
-                  Student Sign Up
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#contact" 
-                  onClick={(e) => handleLinkClick(e, 'contact')}
-                >
-                  Teacher Sign Up
+                <a href="mailto:kapilambarish@gmail.com">
+                  kapilambarish@gmail.com
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Features */}
+          {/* Legal */}
           <div className="footer-section">
-            <h4 className="footer-title">Features</h4>
+            <h4 className="footer-title">Legal</h4>
             <ul className="footer-links">
               <li>
-                <a 
-                  href="#features" 
-                  onClick={(e) => handleLinkClick(e, 'features')}
+                <button 
+                  className="link-button"
+                  onClick={() => setShowPrivacy(true)}
                 >
-                  Mental Health Tracking
-                </a>
+                  Privacy Policy
+                </button>
               </li>
               <li>
-                <a 
-                  href="#features" 
-                  onClick={(e) => handleLinkClick(e, 'features')}
+                <button 
+                  className="link-button"
+                  onClick={() => setShowTerms(true)}
                 >
-                  Habit Building
-                </a>
+                  Terms of Service
+                </button>
               </li>
-              <li>
-                <a 
-                  href="#features" 
-                  onClick={(e) => handleLinkClick(e, 'features')}
-                >
-                  Academic Profiling
-                </a>
-              </li>
-              <li>
-                <a 
-                  href="#features" 
-                  onClick={(e) => handleLinkClick(e, 'features')}
-                >
-                  Progress Analytics
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div className="footer-section">
-            <h4 className="footer-title">Support</h4>
-            <ul className="footer-links">
-              <li>
-                <a 
-                  href="#contact" 
-                  onClick={(e) => handleLinkClick(e, 'contact')}
-                >
-                  Contact Us
-                </a>
-              </li>
-              <li><a href="#help">Help Center</a></li>
-              <li><a href="#privacy">Privacy Policy</a></li>
-              <li><a href="#terms">Terms of Service</a></li>
             </ul>
           </div>
         </div>
@@ -123,6 +67,9 @@ const Footer = () => {
           <p>&copy; 2024 SageFlow. All rights reserved. Empowering student success through mental health and academic support.</p>
         </div>
       </div>
+      
+      <PrivacyModal isOpen={showPrivacy} onClose={() => setShowPrivacy(false)} />
+      <TermsModal isOpen={showTerms} onClose={() => setShowTerms(false)} />
     </footer>
   )
 }
