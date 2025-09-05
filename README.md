@@ -63,16 +63,16 @@ This project is configured for **automatic deployment** to GitHub Pages using Gi
 4. **Configure your custom domain** in GitHub Pages settings:
    - The CNAME file is already configured for `sageflow.in`
 
-### 🛠️ Manual Deployment
+### 🛠️ Manual Build
 
-If you prefer manual deployment:
+To build the project locally for testing:
 
 ```bash
-# Install gh-pages package
+# Install dependencies
 npm install
 
-# Build and deploy
-npm run deploy
+# Build for production
+npm run build
 ```
 
 ### 🌐 Custom Domain Setup (sageflow.in)
