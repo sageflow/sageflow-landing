@@ -40,46 +40,62 @@ A modern, responsive landing page for SageFlow - a comprehensive platform empowe
 
 ## Deployment to GitHub Pages
 
-### Option 1: Using GitHub Web Interface
+### 🚀 Automated Deployment (Recommended)
 
-1. Create a new repository on GitHub
-2. Upload all files (`index.html`, `styles.css`, `script.js`, `README.md`)
-3. Go to repository Settings → Pages
-4. Select "Deploy from a branch" as source
-5. Choose "main" branch and "/ (root)" folder
-6. Click Save
+This project is configured for **automatic deployment** to GitHub Pages using GitHub Actions:
 
-### Option 2: Using Git Commands
+1. **Create a new repository** on GitHub
+2. **Push your code** to the repository:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit: SageFlow React landing page"
+   git remote add origin https://github.com/yourusername/your-repo-name.git
+   git branch -M main
+   git push -u origin main
+   ```
 
-```bash
-# Initialize git repository
-git init
+3. **Enable GitHub Pages** in repository settings:
+   - Go to Settings → Pages
+   - Select "GitHub Actions" as the source
+   - The workflow will automatically build and deploy your site
 
-# Add all files
-git add .
+4. **Configure your custom domain** in GitHub Pages settings:
+   - The CNAME file is already configured for `sageflow.in`
 
-# Commit files
-git commit -m "Initial commit: SageFlow landing page"
+### 🛠️ Manual Deployment
 
-# Add remote repository (replace with your repo URL)
-git remote add origin https://github.com/yourusername/sageflow-landing.git
-
-# Push to GitHub
-git branch -M main
-git push -u origin main
-
-# Enable GitHub Pages in repository settings
-```
-
-### Option 3: Using GitHub CLI
+If you prefer manual deployment:
 
 ```bash
-# Create repository and push
-gh repo create sageflow-landing --public --push
+# Install gh-pages package
+npm install
 
-# Enable GitHub Pages
-gh api repos/:owner/:repo/pages -X POST -f source.branch=main -f source.path=/
+# Build and deploy
+npm run deploy
 ```
+
+### 🌐 Custom Domain Setup (sageflow.in)
+
+Your site is configured for the custom domain `sageflow.in`:
+
+1. **DNS Configuration**: Point your domain to GitHub Pages:
+   - Create an A record pointing to: `185.199.108.153`
+   - Create an A record pointing to: `185.199.109.153`
+   - Create an A record pointing to: `185.199.110.153`
+   - Create an A record pointing to: `185.199.111.153`
+   - Or create a CNAME record pointing to: `yourusername.github.io`
+
+2. **GitHub Pages Settings**:
+   - Go to Settings → Pages
+   - Enter `sageflow.in` in the custom domain field
+   - Enable "Enforce HTTPS"
+
+### 📝 Important Notes
+
+- **CNAME file**: Already created and configured for `sageflow.in`
+- **Build process**: The site needs to be built before deployment (handled automatically)
+- **SSL Certificate**: GitHub will automatically provision SSL for your custom domain
 
 ## Local Development
 
