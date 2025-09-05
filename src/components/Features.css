@@ -1,0 +1,114 @@
+/* Features Section */
+.features {
+  padding: 80px 0;
+  background: #f9fafb;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card.animate-in {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.feature-icon.mental-health {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.feature-icon.habit-tracking {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.feature-icon.academic {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.feature-icon.assessment {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.feature-icon.safety {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.feature-icon.wellness {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.feature-icon.learning {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+.feature-icon.routines {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.feature-icon.family {
+  background: linear-gradient(135deg, #6b7280, #4b5563);
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Animation delays for staggered effect */
+.feature-card:nth-child(1).animate-in { animation-delay: 0.1s; }
+.feature-card:nth-child(2).animate-in { animation-delay: 0.2s; }
+.feature-card:nth-child(3).animate-in { animation-delay: 0.3s; }
+.feature-card:nth-child(4).animate-in { animation-delay: 0.4s; }
+.feature-card:nth-child(5).animate-in { animation-delay: 0.5s; }
+.feature-card:nth-child(6).animate-in { animation-delay: 0.6s; }
+.feature-card:nth-child(7).animate-in { animation-delay: 0.7s; }
+.feature-card:nth-child(8).animate-in { animation-delay: 0.8s; }
+.feature-card:nth-child(9).animate-in { animation-delay: 0.9s; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .feature-card {
+    padding: 1.5rem;
+  }
+}
