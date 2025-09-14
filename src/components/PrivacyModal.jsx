@@ -41,7 +41,7 @@ const PrivacyModal = ({ isOpen, onClose }) => {
           <p>You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us.</p>
 
           <h3>6. Contact Us</h3>
-          <p>If you have questions about this Privacy Policy, please contact us at kapilambarish@gmail.com</p>
+          <p>If you have questions about this Privacy Policy, please contact us at contact@sageflow.in</p>
         </div>
       </div>
     </div>

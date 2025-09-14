@@ -45,7 +45,7 @@ const TermsModal = ({ isOpen, onClose }) => {
           <p>We reserve the right to modify these Terms at any time. Continued use of the service after changes constitutes acceptance of the new Terms.</p>
 
           <h3>9. Contact Information</h3>
-          <p>For questions about these Terms of Service, please contact us at kapilambarish@gmail.com</p>
+          <p>For questions about these Terms of Service, please contact us at contact@sageflow.in</p>
         </div>
       </div>
     </div>
