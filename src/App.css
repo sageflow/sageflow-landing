@@ -1,21 +1,55 @@
 .App {
-  text-align: left;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Print styles */
-@media print {
-  .navbar,
-  .cta,
-  .footer {
-    display: none;
-  }
-  
-  .hero {
-    padding: 20px 0;
-  }
-  
-  body {
-    font-size: 12pt;
-    line-height: 1.4;
-  }
+/* Smooth scrolling for the entire app */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-purple);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
+
+/* Selection color */
+::selection {
+  background: var(--color-primary-light);
+  color: var(--color-white);
+}
+
+::-moz-selection {
+  background: var(--color-primary-light);
+  color: var(--color-white);
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Loading state */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
 }
