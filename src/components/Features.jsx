@@ -11,10 +11,11 @@ const Features = React.memo(() => {
     }
 
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animate-in')
-          // Unobserve after animation to improve performance
+          setTimeout(() => {
+            entry.target.classList.add('animate-in')
+          }, index * 100)
           observer.unobserve(entry.target)
         }
       })
@@ -22,7 +23,7 @@ const Features = React.memo(() => {
 
     const currentRef = featuresRef.current
     const featureCards = currentRef?.querySelectorAll('.feature-card')
-    
+
     featureCards?.forEach(card => {
       observer.observe(card)
     })
@@ -78,13 +79,13 @@ const Features = React.memo(() => {
     {
       icon: 'fas fa-book-open',
       title: 'Daily Learning Engagement',
-      description: 'Expand your vocabulary with a new word each day and challenge your mind with brain teasers in a fun, gamified format that builds consistent learning habits.',
+      description: 'Expand your vocabulary with a new word each day and challenge your mind with brain teasers in a fun, gamified format.',
       iconClass: 'learning'
     },
     {
       icon: 'fas fa-calendar-alt',
       title: 'Personalized Daily Routines',
-      description: 'Get tailor-made daily routines based on your mood, energy levels, academic performance, and mental health data for optimal productivity and well-being.',
+      description: 'Get tailor-made daily routines based on your mood, energy levels, academic performance, and mental health data for optimal productivity.',
       iconClass: 'routines'
     },
     {
@@ -98,6 +99,16 @@ const Features = React.memo(() => {
   return (
     <section className="features" id="features" ref={featuresRef}>
       <div className="container">
+        <div className="features-header">
+          <span className="section-label">Features</span>
+          <h2 className="section-title">
+            Comprehensive Tools for Student Wellness
+          </h2>
+          <p className="section-description">
+            Everything you need to support your mental health, build positive habits, and excel academically—all in one powerful platform.
+          </p>
+        </div>
+
         <div className="features-grid">
           {features.map((feature, index) => (
             <div key={index} className="feature-card">

@@ -13,50 +13,105 @@ const Footer = () => {
     <footer className="footer" id="contact">
       <div className="container">
         <div className="footer-content">
-          {/* Company Info */}
-          <div className="footer-section">
+          {/* Brand Section */}
+          <div className="footer-brand">
             <div className="footer-logo">
-              <div className="logo-icon">
+              <div className="footer-logo-icon">
                 <i className="fas fa-leaf"></i>
               </div>
-              <span className="logo-text">SageFlow</span>
+              <span className="footer-logo-text">SageFlow</span>
             </div>
             <p className="footer-description">
-              Empowering students to thrive mentally and academically through data-driven insights and support.
+              Empowering students to build healthy habits and mental wellness through comprehensive tracking, support, and personalized insights.
             </p>
+            <div className="footer-social">
+              <a href="https://twitter.com" className="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="https://facebook.com" className="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-facebook"></i>
+              </a>
+              <a href="https://instagram.com" className="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="https://linkedin.com" className="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-linkedin"></i>
+              </a>
+            </div>
           </div>
 
-
-          {/* Contact & Legal */}
+          {/* Product Section */}
           <div className="footer-section">
-            <h4 className="footer-title">Contact Us</h4>
+            <h3>Product</h3>
             <ul className="footer-links">
               <li>
-                <a href="mailto:contact@sageflow.in">
-                  contact@sageflow.in
+                <a href="#features" className="footer-link" onClick={(e) => handleLinkClick(e, 'features')}>
+                  <i className="fas fa-chevron-right"></i>
+                  <span>Features</span>
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="footer-link" onClick={(e) => handleLinkClick(e, 'about')}>
+                  <i className="fas fa-chevron-right"></i>
+                  <span>About Us</span>
+                </a>
+              </li>
+              <li>
+                <a href="#testimonials" className="footer-link" onClick={(e) => handleLinkClick(e, 'testimonials')}>
+                  <i className="fas fa-chevron-right"></i>
+                  <span>Testimonials</span>
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Support Section */}
           <div className="footer-section">
-            <h4 className="footer-title">Legal</h4>
+            <h3>Support</h3>
             <ul className="footer-links">
               <li>
-                <button 
-                  className="link-button"
+                <a href="mailto:contact@sageflow.in" className="footer-link">
+                  <i className="fas fa-chevron-right"></i>
+                  <span>Contact Us</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="footer-link">
+                  <i className="fas fa-chevron-right"></i>
+                  <span>Help Center</span>
+                </a>
+              </li>
+              <li>
+                <a href="#" className="footer-link">
+                  <i className="fas fa-chevron-right"></i>
+                  <span>FAQ</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal Section */}
+          <div className="footer-section">
+            <h3>Legal</h3>
+            <ul className="footer-links">
+              <li>
+                <button
+                  className="footer-link"
                   onClick={() => setShowPrivacy(true)}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
                 >
-                  Privacy Policy
+                  <i className="fas fa-chevron-right"></i>
+                  <span>Privacy Policy</span>
                 </button>
               </li>
               <li>
-                <button 
-                  className="link-button"
+                <button
+                  className="footer-link"
                   onClick={() => setShowTerms(true)}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
                 >
-                  Terms of Service
+                  <i className="fas fa-chevron-right"></i>
+                  <span>Terms of Service</span>
                 </button>
               </li>
             </ul>
@@ -64,10 +119,26 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2024 SageFlow. All rights reserved. Empowering student success through mental health and academic support.</p>
+          <p className="footer-copyright">
+            © 2024 SageFlow. All rights reserved.
+          </p>
+          <div className="footer-legal">
+            <button
+              className="footer-legal-link"
+              onClick={() => setShowPrivacy(true)}
+            >
+              Privacy Policy
+            </button>
+            <button
+              className="footer-legal-link"
+              onClick={() => setShowTerms(true)}
+            >
+              Terms of Service
+            </button>
+          </div>
         </div>
       </div>
-      
+
       <PrivacyModal isOpen={showPrivacy} onClose={() => setShowPrivacy(false)} />
       <TermsModal isOpen={showTerms} onClose={() => setShowTerms(false)} />
     </footer>
