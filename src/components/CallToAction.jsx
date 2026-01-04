@@ -20,7 +20,7 @@ const CallToAction = () => {
           </p>
 
           <div className="cta-buttons">
-            <a href="#https://sage-flow-ebon.vercel.app/" className="btn btn-white btn-large">
+            <a href="https://sage-flow-ebon.vercel.app/" className="btn btn-white btn-large">
               <span>Get Started Free</span>
               <i className="fas fa-arrow-right"></i>
             </a>
