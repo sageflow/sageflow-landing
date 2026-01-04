@@ -53,7 +53,7 @@ const Navbar = () => {
             Contact
           </a>
           <div className="nav-cta">
-            <a href="#features" className="btn btn-primary">
+            <a href="https://sage-flow-ebon.vercel.app/" className="btn btn-primary">
               Get Started
             </a>
           </div>
