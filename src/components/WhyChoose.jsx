@@ -22,7 +22,7 @@ const WhyChoose = React.memo(() => {
       iconClass: 'pink'
     },
     {
-      icon: 'fas fa-users-medical',
+      icon: 'fas fa-user-doctor',
       title: 'Professional Guidance',
       description: 'Access to licensed therapists and counselors who understand student mental health challenges.',
       iconClass: 'purple'
