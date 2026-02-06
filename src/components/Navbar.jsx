@@ -21,9 +21,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <a href="#hero" className="nav-logo" onClick={(e) => handleNavLinkClick(e, 'hero')}>
-          <div className="logo-icon">
-            <i className="fas fa-leaf"></i>
-          </div>
+          <img src="/logo.png" alt="SageFlow Logo" className="logo-icon" />
           <span className="logo-text">SageFlow</span>
         </a>
 

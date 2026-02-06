@@ -10,9 +10,14 @@
 }
 
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.85);
+  /* Increased transparency for glass effect */
+  backdrop-filter: blur(12px);
+  /* Enhance blur */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  /* Subtle border */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  /* Softer shadow */
   padding: var(--spacing-sm) 0;
 }
 
@@ -36,14 +41,15 @@
 .logo-icon {
   width: 40px;
   height: 40px;
-  background: var(--gradient-purple);
-  border-radius: var(--radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 20px;
+  object-fit: contain;
   transition: all var(--transition-base);
+  filter: brightness(0) invert(1);
+  /* Make logo white initially */
+}
+
+.navbar.scrolled .logo-icon {
+  filter: none;
+  /* Restore original colors on light background */
 }
 
 .nav-logo:hover .logo-icon {

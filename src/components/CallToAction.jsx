@@ -4,6 +4,11 @@ import './CallToAction.css'
 const CallToAction = () => {
   return (
     <section className="cta" id="cta">
+      <div className="cta-bg">
+        <div className="cta-blob cta-blob-1"></div>
+        <div className="cta-blob cta-blob-2"></div>
+        <div className="cta-blob cta-blob-3"></div>
+      </div>
       <div className="container">
         <div className="cta-container">
           <div className="cta-badge">
@@ -21,13 +26,10 @@ const CallToAction = () => {
 
           <div className="cta-buttons">
             <a href="https://sage-flow-ebon.vercel.app/" className="btn btn-white btn-large">
-              <span>Get Started Free</span>
+              <span>Get Started</span>
               <i className="fas fa-arrow-right"></i>
             </a>
-            <a href="#contact" className="btn btn-outline btn-large" style={{ borderColor: 'white', color: 'white' }}>
-              <i className="fas fa-calendar"></i>
-              <span>Schedule a Demo</span>
-            </a>
+
           </div>
 
           <div className="cta-features">

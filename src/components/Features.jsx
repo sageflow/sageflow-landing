@@ -52,12 +52,7 @@ const Features = React.memo(() => {
       description: 'Monitor daily habits, sleep patterns, exercise routines, and screen time to build healthy lifestyle choices and improve overall well-being.',
       iconClass: 'habit-tracking'
     },
-    {
-      icon: 'fas fa-chart-line',
-      title: 'Academic Profiling',
-      description: 'Track academic performance, identify learning patterns, and receive personalized insights to optimize your educational journey.',
-      iconClass: 'academic'
-    },
+
     {
       icon: 'fas fa-clipboard-check',
       title: 'Assessment Suite',
@@ -76,24 +71,14 @@ const Features = React.memo(() => {
       description: 'Take quick weekly pulse checks to monitor your mood and stress levels, with personalized insights and progress tracking over time.',
       iconClass: 'wellness'
     },
-    {
-      icon: 'fas fa-book-open',
-      title: 'Daily Learning Engagement',
-      description: 'Expand your vocabulary with a new word each day and challenge your mind with brain teasers in a fun, gamified format.',
-      iconClass: 'learning'
-    },
+
     {
       icon: 'fas fa-calendar-alt',
       title: 'Personalized Daily Routines',
       description: 'Get tailor-made daily routines based on your mood, energy levels, academic performance, and mental health data for optimal productivity.',
       iconClass: 'routines'
     },
-    {
-      icon: 'fas fa-users',
-      title: 'Family Integration',
-      description: 'Keep parents and guardians informed about your progress while maintaining your privacy. Build stronger family relationships through shared insights.',
-      iconClass: 'family'
-    }
+
   ]
 
   return (
