@@ -1,41 +1,72 @@
 .cta {
   padding: var(--spacing-4xl) 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--gradient-primary);
   position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.cta-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   overflow: hidden;
 }
 
-.cta::before,
-.cta::after {
-  content: '';
+.cta-blob {
   position: absolute;
-  border-radius: 50%;
   filter: blur(80px);
+  opacity: 0.6;
+}
+
+.cta-blob-1 {
+  top: -10%;
+  right: -5%;
+  /* Moved to right like Hero for variety or use left */
+  right: auto;
+  left: -10%;
+  /* Keep original position but change color */
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, var(--color-secondary) 0%, transparent 70%);
+  /* Was primary */
+  animation: float 20s infinite ease-in-out;
+}
+
+.cta-blob-2 {
+  bottom: -10%;
+  right: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, var(--color-primary-light) 0%, transparent 70%);
+  /* Was secondary */
+  animation: float 25s infinite ease-in-out reverse;
+}
+
+.cta-blob-3 {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, var(--color-accent) 0%, transparent 70%);
   opacity: 0.3;
-}
-
-.cta::before {
-  width: 500px;
-  height: 500px;
-  background: rgba(245, 158, 11, 0.4);
-  top: -200px;
-  left: -100px;
-}
-
-.cta::after {
-  width: 600px;
-  height: 600px;
-  background: rgba(236, 72, 153, 0.4);
-  bottom: -250px;
-  right: -150px;
+  animation: pulse 15s infinite ease-in-out;
 }
 
 .cta-container {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 900px;
+  max-width: 1200px;
+  /* Increased from 900px to make it wider */
   margin: 0 auto;
+
+  /* Removed Glassmorphism Box Styles */
+  padding: 0;
 }
 
 .cta-badge {
@@ -43,22 +74,25 @@
   align-items: center;
   gap: var(--spacing-xs);
   padding: 0.5rem 1rem;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: var(--radius-full);
   color: var(--color-white);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-medium);
   margin-bottom: var(--spacing-lg);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .cta-title {
-  font-size: var(--font-size-5xl);
+  font-size: var(--font-size-6xl);
+  /* Increased size for impact */
   font-weight: var(--font-weight-extrabold);
   color: var(--color-white);
   margin-bottom: var(--spacing-lg);
   line-height: var(--line-height-tight);
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .cta-description {

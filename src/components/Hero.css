@@ -3,38 +3,57 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--gradient-primary);
   overflow: hidden;
   padding-top: 80px;
+  isolation: isolate;
 }
 
-/* Animated Background Blobs */
-.hero::before,
-.hero::after {
-  content: '';
+/* Animated Background Blobs - Modern Style */
+.hero-bg {
   position: absolute;
-  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.hero-blob {
+  position: absolute;
   filter: blur(80px);
-  opacity: 0.3;
-  animation: float 20s ease-in-out infinite;
+  opacity: 0.5;
+  border-radius: 50%;
 }
 
-.hero::before {
-  width: 600px;
-  height: 600px;
-  background: rgba(245, 158, 11, 0.4);
-  top: -200px;
-  right: -100px;
-  animation-delay: -5s;
+.hero-blob-1 {
+  top: -10%;
+  right: -5%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, var(--color-secondary) 0%, transparent 70%);
+  animation: float 25s infinite ease-in-out;
 }
 
-.hero::after {
-  width: 500px;
-  height: 500px;
-  background: rgba(236, 72, 153, 0.4);
-  bottom: -150px;
-  left: -100px;
-  animation-delay: -10s;
+.hero-blob-2 {
+  bottom: -10%;
+  left: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, var(--color-primary-light) 0%, transparent 70%);
+  animation: float 30s infinite ease-in-out reverse;
+}
+
+.hero-blob-3 {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, var(--color-accent) 0%, transparent 80%);
+  opacity: 0.2;
+  animation: pulse 15s infinite ease-in-out;
 }
 
 .hero-container {
@@ -161,12 +180,12 @@
 }
 
 .floating-card-icon.purple {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var(--gradient-purple);
   color: white;
 }
 
 .floating-card-icon.orange {
-  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+  background: var(--gradient-secondary);
   color: white;
 }
 

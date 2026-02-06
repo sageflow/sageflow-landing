@@ -16,13 +16,11 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="footer-brand">
             <div className="footer-logo">
-              <div className="footer-logo-icon">
-                <i className="fas fa-leaf"></i>
-              </div>
+              <img src="/logo.png" alt="SageFlow Logo" className="footer-logo-icon" />
               <span className="footer-logo-text">SageFlow</span>
             </div>
             <p className="footer-description">
-              Empowering students to build healthy habits and mental wellness through comprehensive tracking, support, and personalized insights.
+              Sageflow is an AI powered mental health platform that helps schools continuously understand and support each student’s emotional and cognitive wellbeing.
             </p>
             <div className="footer-social">
               <a href="https://twitter.com" className="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
