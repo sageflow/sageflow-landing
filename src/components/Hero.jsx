@@ -19,7 +19,7 @@ const Hero = () => {
 
 
             <h1 className="hero-title">
-              Empowering Students to Build <span className="highlight">Healthy Habits</span> and <span className="highlight">Mental Wellbeing.</span>
+              AI Powered Student <span className="highlight">Mental Health</span> Solution.
             </h1>
 
             <p className="hero-description">
