@@ -51,7 +51,7 @@ const Navbar = () => {
             Contact
           </a>
           <div className="nav-cta">
-            <a href="https://sage-flow-ebon.vercel.app/" className="btn btn-primary">
+            <a href="https://sage-flow-ebon.vercel.app/" className={`btn ${isScrolled ? 'btn-primary' : 'btn-white'}`}>
               Get Started
             </a>
           </div>

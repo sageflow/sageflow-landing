@@ -62,11 +62,50 @@
   z-index: 2;
   text-align: center;
   max-width: 1200px;
-  /* Increased from 900px to make it wider */
   margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
 
-  /* Removed Glassmorphism Box Styles */
-  padding: 0;
+.cta-glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-4xl) var(--spacing-2xl);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Add a subtle shine effect */
+.cta-glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(to right,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent);
+  transform: rotate(30deg);
+  animation: shine 8s infinite linear;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-100%) rotate(30deg);
+  }
+
+  100% {
+    transform: translateX(100%) rotate(30deg);
+  }
 }
 
 .cta-badge {
@@ -93,6 +132,13 @@
   margin-bottom: var(--spacing-lg);
   line-height: var(--line-height-tight);
   text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cta-title .highlight {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .cta-description {

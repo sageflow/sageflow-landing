@@ -11,39 +11,40 @@ const CallToAction = () => {
       </div>
       <div className="container">
         <div className="cta-container">
-          <div className="cta-badge">
-            <i className="fas fa-rocket"></i>
-            <span>Start Your Wellness Journey Today</span>
-          </div>
-
-          <h2 className="cta-title">
-            Ready to Transform Your Student Life?
-          </h2>
-
-          <p className="cta-description">
-            Join thousands of students who are already building healthier habits, improving their mental wellness, and achieving their academic goals with SageFlow.
-          </p>
-
-          <div className="cta-buttons">
-            <a href="https://sage-flow-ebon.vercel.app/" className="btn btn-white btn-large">
-              <span>Get Started</span>
-              <i className="fas fa-arrow-right"></i>
-            </a>
-
-          </div>
-
-          <div className="cta-features">
-            <div className="cta-feature">
-              <i className="fas fa-check-circle"></i>
-              <span>Free to start</span>
+          <div className="cta-glass-card">
+            <div className="cta-badge">
+              <i className="fas fa-rocket"></i>
+              <span>Start Your Wellness Journey Today</span>
             </div>
-            <div className="cta-feature">
-              <i className="fas fa-check-circle"></i>
-              <span>No credit card required</span>
+
+            <h2 className="cta-title">
+              AI Powered Student <span className="highlight">Mental Health</span> and <span className="highlight">Wellbeing Platform.</span>
+            </h2>
+
+            <p className="cta-description">
+              Sageflow is an AI powered mental health platform that helps schools continuously understand and support each student’s emotional and cognitive wellbeing.
+            </p>
+
+            <div className="cta-buttons">
+              <a href="https://sage-flow-ebon.vercel.app/" className="btn btn-white btn-large">
+                <span>Get Started</span>
+                <i className="fas fa-arrow-right"></i>
+              </a>
             </div>
-            <div className="cta-feature">
-              <i className="fas fa-check-circle"></i>
-              <span>Cancel anytime</span>
+
+            <div className="cta-features">
+              <div className="cta-feature">
+                <i className="fas fa-check-circle"></i>
+                <span>Free to start</span>
+              </div>
+              <div className="cta-feature">
+                <i className="fas fa-check-circle"></i>
+                <span>No credit card required</span>
+              </div>
+              <div className="cta-feature">
+                <i className="fas fa-check-circle"></i>
+                <span>Cancel anytime</span>
+              </div>
             </div>
           </div>
         </div>

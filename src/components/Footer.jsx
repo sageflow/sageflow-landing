@@ -13,112 +13,38 @@ const Footer = () => {
     <footer className="footer" id="contact">
       <div className="container">
         <div className="footer-content">
-          {/* Brand Section */}
-          <div className="footer-brand">
-            <div className="footer-logo">
-              <img src="/logo.png" alt="SageFlow Logo" className="footer-logo-icon" />
-              <span className="footer-logo-text">SageFlow</span>
-            </div>
-            <p className="footer-description">
-              Sageflow is an AI powered mental health platform that helps schools continuously understand and support each student’s emotional and cognitive wellbeing.
-            </p>
-            <div className="footer-social">
-              <a href="https://twitter.com" className="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="https://facebook.com" className="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-facebook"></i>
-              </a>
-              <a href="https://instagram.com" className="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="https://linkedin.com" className="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-linkedin"></i>
-              </a>
-            </div>
+          <div className="footer-logo">
+            <img src="/logo.png" alt="SageFlow Logo" className="footer-logo-icon" />
+            <span className="footer-logo-text">SageFlow</span>
           </div>
-
-          {/* Product Section */}
-          <div className="footer-section">
-            <h3>Product</h3>
-            <ul className="footer-links">
-              <li>
-                <a href="#features" className="footer-link" onClick={(e) => handleLinkClick(e, 'features')}>
-                  <i className="fas fa-chevron-right"></i>
-                  <span>Features</span>
-                </a>
-              </li>
-              <li>
-                <a href="#about" className="footer-link" onClick={(e) => handleLinkClick(e, 'about')}>
-                  <i className="fas fa-chevron-right"></i>
-                  <span>About Us</span>
-                </a>
-              </li>
-              <li>
-                <a href="#testimonials" className="footer-link" onClick={(e) => handleLinkClick(e, 'testimonials')}>
-                  <i className="fas fa-chevron-right"></i>
-                  <span>Testimonials</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Support Section */}
-          <div className="footer-section">
-            <h3>Support</h3>
-            <ul className="footer-links">
-              <li>
-                <a href="mailto:contact@sageflow.in" className="footer-link">
-                  <i className="fas fa-chevron-right"></i>
-                  <span>Contact Us</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" className="footer-link">
-                  <i className="fas fa-chevron-right"></i>
-                  <span>Help Center</span>
-                </a>
-              </li>
-              <li>
-                <a href="#" className="footer-link">
-                  <i className="fas fa-chevron-right"></i>
-                  <span>FAQ</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Legal Section */}
-          <div className="footer-section">
-            <h3>Legal</h3>
-            <ul className="footer-links">
-              <li>
-                <button
-                  className="footer-link"
-                  onClick={() => setShowPrivacy(true)}
-                  style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
-                >
-                  <i className="fas fa-chevron-right"></i>
-                  <span>Privacy Policy</span>
-                </button>
-              </li>
-              <li>
-                <button
-                  className="footer-link"
-                  onClick={() => setShowTerms(true)}
-                  style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
-                >
-                  <i className="fas fa-chevron-right"></i>
-                  <span>Terms of Service</span>
-                </button>
-              </li>
-            </ul>
+          <div className="footer-social">
+            <a href="https://twitter.com" className="social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href="https://facebook.com" className="social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-facebook"></i>
+            </a>
+            <a href="https://instagram.com" className="social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" className="social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:contact@sageflow.in" className="social-link" aria-label="Email" target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-envelope"></i>
+            </a>
+            <a href="https://wa.me/1234567890" className="social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+              <i className="fab fa-whatsapp"></i>
+            </a>
           </div>
         </div>
 
         <div className="footer-bottom">
           <p className="footer-copyright">
-            © 2024 SageFlow. All rights reserved.
+            © 2025 SageFlow. All rights reserved.
+          </p>
+          <p className="footer-location">
+            <i className="fas fa-heart"></i> Designed with love in Guwahati, India
           </p>
           <div className="footer-legal">
             <button
