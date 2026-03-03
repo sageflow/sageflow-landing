@@ -18,15 +18,34 @@ const CallToAction = () => {
             </div>
 
             <h2 className="cta-title">
-              AI Powered Student <span className="highlight">Mental Health</span> and <span className="highlight">Wellbeing Platform.</span>
+              Smart &amp; Proactive <span className="highlight">Mental Health</span> Support.
             </h2>
 
-            <p className="cta-description">
-              Sageflow is an AI powered mental health platform that helps schools continuously understand and support each student’s emotional and cognitive wellbeing.
-            </p>
+            <h2 className="cta-subtitle">
+              Continuous Assessment <i className="fas fa-arrow-right highlight-icon" style={{ margin: '0 12px', fontSize: '0.8em' }}></i> <span className="highlight">Prioritisation</span> <i className="fas fa-arrow-right highlight-icon" style={{ margin: '0 12px', fontSize: '0.8em' }}></i> Action
+            </h2>
+
+            <div className="cta-description">
+              {/* <p>
+                Sageflow is an AI powered mental health platform that helps schools continuously understand and support each student’s emotional and cognitive wellbeing.
+              </p> */}
+
+              <ul className="cta-text-list">
+                <li>Adaptive AI assessments.</li>
+                <li>Continuous mental health screening.</li>
+                <li>Psychometric & behavioural mapping.</li>
+                <li>Risk prioritisation & referral workflows.</li>
+                <li>Dashboards for schools, parents, psychologists.</li>
+              </ul>
+
+              {/* <p>
+                <strong>Upcoming:</strong> Private and secure integrated <strong>AI Counsellor</strong> to talk to mental health related issues.
+              </p> */}
+
+            </div>
 
             <div className="cta-buttons">
-              <a href="https://sage-flow-ebon.vercel.app/" className="btn btn-white btn-large">
+              <a href="https://app.sageflow.in" className="btn btn-white btn-large">
                 <span>Get Started</span>
                 <i className="fas fa-arrow-right"></i>
               </a>

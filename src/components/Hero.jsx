@@ -27,7 +27,7 @@ const Hero = () => {
             </p>
 
             <div className="hero-cta">
-              <a href="https://sage-flow-ebon.vercel.app/" className="btn btn-white btn-large">
+              <a href="https://app.sageflow.in" className="btn btn-white btn-large">
                 <span>Get Started</span>
                 <i className="fas fa-arrow-right"></i>
               </a>
